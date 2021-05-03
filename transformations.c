@@ -80,7 +80,7 @@ struct bmp_image* extract(const struct bmp_image* image, const char* colors_to_k
             }
             __fn__;
         })
-	);
+    );
 }
 
 struct bmp_image* grayscale(const struct bmp_image* image, const double amount) {
@@ -96,7 +96,7 @@ struct bmp_image* grayscale(const struct bmp_image* image, const double amount) 
             }
             __fn__;
         })
-	);
+    );
 }
 
 struct bmp_image* sharpen(const struct bmp_image* image, const double amount) {
@@ -107,7 +107,7 @@ struct bmp_image* sharpen(const struct bmp_image* image, const double amount) {
         {1.0 / 9.0, 1.0 / 9.0, 1.0 / 9.0},
         {1.0 / 9.0, 1.0 / 9.0, 1.0 / 9.0},
         {1.0 / 9.0, 1.0 / 9.0, 1.0 / 9.0}
-	};
+    };
 
     const int off = floor(kernel_size / 2.0);
 
@@ -136,7 +136,7 @@ struct bmp_image* sharpen(const struct bmp_image* image, const double amount) {
             }
             __fn__;
         })
-	);
+    );
 }
 
 struct bmp_image* rotate(const struct bmp_image* image, const double angle, const bool clampToEdge) {
@@ -171,9 +171,9 @@ struct bmp_image* rotate(const struct bmp_image* image, const double angle, cons
                     img->header,
                     clamp(round(nx), 0, w - 1),
                     clamp(round(ny), 0, h - 1)
-				)];
+                )];
             }
             __fn__;
         })
-	);
+    );
 }

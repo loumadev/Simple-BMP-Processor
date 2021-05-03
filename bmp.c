@@ -21,22 +21,22 @@ uint32_t y_ppm: 0x%x %d\n\
 uint32_t num_colors: 0x%x %d\n\
 uint32_t important_colors: 0x%x %d\n",
         header->type, header->type,
-		header->size, header->size,
-		header->reserved1, header->reserved1, 
-		header->reserved2, header->reserved2,
-		header->offset, header->offset,
-		header->dib_size, header->dib_size,
-		header->width, header->width,
-		header->height, header->height,
-		header->planes, header->planes,
-		header->bpp, header->bpp,
-		header->compression, header->compression,
-		header->image_size, header->image_size,
-		header->x_ppm, header->x_ppm,
-		header->y_ppm, header->y_ppm,
-		header->num_colors, header->num_colors,
-		header->important_colors, header->important_colors
-	);
+        header->size, header->size,
+        header->reserved1, header->reserved1, 
+        header->reserved2, header->reserved2,
+        header->offset, header->offset,
+        header->dib_size, header->dib_size,
+        header->width, header->width,
+        header->height, header->height,
+        header->planes, header->planes,
+        header->bpp, header->bpp,
+        header->compression, header->compression,
+        header->image_size, header->image_size,
+        header->x_ppm, header->x_ppm,
+        header->y_ppm, header->y_ppm,
+        header->num_colors, header->num_colors,
+        header->important_colors, header->important_colors
+    );
 }
 
 void printData(struct bmp_header* header, struct pixel* data) {
