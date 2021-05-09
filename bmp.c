@@ -124,9 +124,9 @@ struct pixel* read_data(FILE* stream, const struct bmp_header* header) {
     for (int i = 0; i < size; i++) {
         int offset = toOffset(header, i % header->width, header->height - i / header->width - 1);
 
-        fread(&data[offset].blue, 1, sizeof(uint8_t), stream);
-        fread(&data[offset].green, 1, sizeof(uint8_t), stream);
-        fread(&data[offset].red, 1, sizeof(uint8_t), stream);
+        fread(&data[offset].blue, sizeof(uint8_t), 1, stream);
+        fread(&data[offset].green, sizeof(uint8_t), 1, stream);
+        fread(&data[offset].red, sizeof(uint8_t), 1, stream);
 
         if ((i + 1) % header->width == 0) fseek(stream, padding, SEEK_CUR);
     }

@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     signal(SIGSEGV, handler);
 
     //Load file
-    FILE* stream = fopen("./assets/lenna.bmp", "rb");
+    FILE* stream = fopen("./assets/marbles.bmp", "rb");
     struct bmp_image* img = read_bmp(stream);
     fclose(stream);
 
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
     //img = rotate_right(img);
     //img = extract(img, "g");
     //img = grayscale(img, 0.5);
-    //img = sharpen(img, 0.8);
+    //img = sharpen(img, 1.2);
     img = rotate(img, 38 * (3.1415 / 180), true);
 
     //Save file
