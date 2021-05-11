@@ -102,7 +102,7 @@ struct bmp_image* grayscale(const struct bmp_image* image, const double amount) 
 struct bmp_image* sharpen(const struct bmp_image* image, const double amount) {
     const int kernel_size = 3;
 
-    //The compiler is fucked up so have to use numbers instead of consts
+    //The compiler is f***ed up so have to use numbers instead of consts
     const double kernel[3][3] = {
         {1.0 / 9.0, 1.0 / 9.0, 1.0 / 9.0},
         {1.0 / 9.0, 1.0 / 9.0, 1.0 / 9.0},
